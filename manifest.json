@@ -1,202 +1,398 @@
 {
-    "name": "Nuvio Plugins",
-    "version": "1",
-    "plugins": [
-        {
-            "id": "phimchill",
-            "name": "Phim Chill",
-            "version": "3.7.7",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/9d250115cfc1a9625c09824e5e0ba68a44dd1170/Plugins/phimchill_plugin.js",
-            "iconUrl": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/phimchill.ico"
-        },
-        {
-            "id": "phimhayok",
-            "name": "Phim Hay Ok",
-            "version": "1.1.1",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/9d250115cfc1a9625c09824e5e0ba68a44dd1170/Plugins/phimhayok_plugin.js",
-            "iconUrl": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/phimhayok.jpg"
-        },
-        {
-            "id": "nguoncnew",
-            "name": "Nguồn C No ADS",
-            "version": "1.26",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/14f90fe4bebcd6ebb05666cae694654e4f11934d/Plugins/nguoncnew.js",
-            "iconUrl": "https://raw.githubusercontent.com/youngbi/repo/main/plugins/nguonC.png"
-        },
-        {
-            "id": "phimnganhdc",
-            "name": "Phim Ngắn HDC",
-            "version": "1.2",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/bef591c63d5bde15a66edb861b94045fda8895fb/Plugins/phimnganhdc_plugin.js",
-            "iconUrl": "https://phimnganhdc.com/storage/files/logo-phimnganhdc.png"
-        },
-        {
-            "id": "onflix",
-            "name": "Onflix Phim",
-            "version": "1.7.6",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/98e347ea11b87239072bcc72e97f2de2fc410d6c/Plugins/onflix_plugin.js",
-            "iconUrl": "https://onflix.lat/app/asset/logo.png"
-        },
-        {
-            "id": "bilutv",
-            "name": "Nguồn Bilutv",
-            "version": "1.4",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/aa1986339c3b8f2d3ac86db859a5e7dd86b548da/Plugins/bilutv_plugin.js",
-            "iconUrl": "https://bilutv.asia/img/bilutvlogo-ngang.jpg"
-        },
-        {
-            "id": "sexdep",
-            "name": "Sex Đep",
-            "version": "1.4.4",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/2a7a4264042ab6d5c88290ec2b90e14d46b9c90e/Plugins/sexdep_plugin.js",
-            "iconUrl": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/cnporn.jpg"
-        },
-        {
-            "id": "xxxfiles",
-            "name": "XXXfiles",
-            "version": "1.9.3",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/ef5eb21af9dea4d539a05f5aa3753a52fbdbe259/Plugins/xxxfiles_plugin.js",
-            "iconUrl": "https://www.xxxfiles.com/img/logo.png?v=3"
-        },
-        {
-            "id": "motherless",
-            "name": "Motherless",
-            "version": "1.5",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/ef5eb21af9dea4d539a05f5aa3753a52fbdbe259/Plugins/motherless_plugin.js",
-            "iconUrl": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/motherless_logo.jpg"
-        },
-        {
-            "id": "heovl",
-            "name": "Heovl",
-            "version": "1.4",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/e60ddbcdc0fd78e80b33ad1b818c4d50b2dc35ba/Plugins/heovl_plugin.js",
-            "iconUrl": "https://heovl.im/resize/50/2024/05/09/3aecc32e86cf3a79a98ed9f567354ab1fdd5d5355ddefdbb24855553b519a396.png"
-        },
-        {
-            "id": "newporn",
-            "name": "18 Porn",
-            "version": "1.3",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/1fe0e3ad1a513f9bcc5ccabbca07dc497cbf895d/Plugins/18porn_plugin.js",
-            "iconUrl": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/18porn.jpg"
-        },
-        {
-            "id": "viet69",
-            "name": "viet69",
-            "version": "1.4",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/b84842bddc7bd1a53b344dc06b56ef2e8ba13d09/Plugins/viet69_plugin.js",
-            "iconUrl": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/viet69.png"
-        },
-        {
-            "id": "haysex",
-            "name": "Haysex",
-            "version": "1.0",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/d6295579197874c80e0188ee5f960b60a1959a4e/Plugins/haysex_plugin.js",
-            "iconUrl": "https://phimsexsuong3x.net/wp-content/uploads/2023/07/haysex3x-logo.png"
-        },
-        {
-            "id": "xhamster",
-            "name": "Xamster",
-            "version": "1.0",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/d6295579197874c80e0188ee5f960b60a1959a4e/Plugins/xhamster_plugin.js",
-            "iconUrl": "https://static.cdnsolutions.media/xh-desktop/images/favicon/favicon-v2-256x256.ico"
-        },
-        {
-            "id": "superporn",
-            "name": "SuperPorn",
-            "version": "3.6.1",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/916cd0293662360ba0289c572c59ac3679e2bf88/Plugins/superporn_plugin.js",
-            "iconUrl": "https://superporn.com/favicon.ico"
-        },
-        {
-            "id": "sexmup",
-            "name": "Sex Múp",
-            "version": "1.2",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/e6587a2d2efc865d52d95648f7bd383c113ac5e1/Plugins/sexmup_plugin.js",
-            "iconUrl": "https://sexmupxinh.net/favicon.ico"
-        },
-        {
-            "id": "justporn",
-            "name": "Just Porn",
-            "version": "1.5.2",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/f3bd044b3b36fcd15e67e89a1571c3a5b42af9c7/Plugins/just_porn_plugin.js",
-            "iconUrl": "https://c847a9a666.mjedge.net/contents/pkehlvuovbaw/theme/logo.png"
-        },
-        {
-            "id": "trannyone",
-            "name": "Tranny One",
-            "version": "2.3.5",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/1e82cba9d7f218e31b75be595ba4ce0fa3f36728/Plugins/trannyone_plugin.js",
-            "iconUrl": "https://cdn1.tranny.one/trannystatic/v30/common/lib-tr/img/logo-2x.png"
-        },
-        {
-            "id": "trannymovs",
-            "name": "Tranny Movs",
-            "version": "1.6",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/43f27bb8c8d43b37c0f19b0fd5f3a97018f5dbc1/Plugins/trannymovs_plugin.js",
-            "iconUrl": "https://www.trannymovs.com/static/images/trannymovs-logo.png"
-        },
-        {
-            "id": "koreaporn",
-            "name": "Sex Hàn",
-            "version": "1.7.2",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/b208efaddf974d9a0b87e690805e53c6b5502f00/Plugins/koreaporn_plugin.js",
-            "iconUrl": "https://koreanpornmovie.com/wp-content/uploads/2025/01/sadasdasdasdas.png"
-        },
-        {
-            "id": "chinesporn",
-            "name": "Sex Trung",
-            "version": "1.3",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/1fdb307330275e8e51921cddcf70824ed40b50e5/Plugins/chinesporn_plugin.js",
-            "iconUrl": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/chinesporn.jpg"
-        },
-        {
-            "id": "krx18",
-            "name": "Phim 18+",
-            "version": "1.0",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/23b50e4e047757cf21be309468ae06ee1f458d87/Plugins/krx18_plugin.js",
-            "iconUrl": "https://krx18.com/wp-content/uploads/2022/10/krx18B.png"
-        },
-        {
-            "id": "porn00",
-            "name": "Porn00",
-            "version": "1.8",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/f552eb2a142f0f9733ad954e1d383419ff043c8d/Plugins/porn00_plugin.js",
-            "iconUrl": "https://www.porn00.tv/static/images/logo.png"
-        },
-        {
-            "id": "cnporn",
-            "name": "Porn Gái Trung",
-            "version": "1.2",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/c9c5ebfc6eab49ca650a14fd5595081e68028028/Plugins/cnporn_plugin.js",
-            "iconUrl": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/cnporn.jpg"
-        },
-        {
-            "id": "letsporn",
-            "name": "Lets Porn",
-            "version": "1.7.2",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/d52fb49d301779730e85a8898427ef1449b90f15/Plugins/letsporn_plugin.js",
-            "iconUrl": "https://static.letsporn.com/static/img/logo.png?v=1.2"
-        },
-        {
-            "id": "xsexsub",
-            "name": "Phim XXX Vietsub",
-            "version": "1.3",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/3ae45b1dc42a2f5ab78cd16fca4368c14e121880/Plugins/xsexsub_plugin.js",
-            "iconUrl": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/cnporn.jpg"
-        },
-        {
-            "id": "4kporn",
-            "name": "Phim XXX 4K ",
-            "version": "1.5",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/68cb61ea19e016ffce2b10f6f90e8b1ed86b0883/Plugins/4kporn_plugin.js",
-            "iconUrl": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/cnporn.jpg"
-        },
-        {
-            "id": "bemyhole",
-            "name": "XXX Độc Lạ",
-            "version": "1.7.1",
-            "scriptUrl": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/c9faa2e44e70814fcfe3822625f66e57ec8cfd2f/Plugins/bemyhole_plugin.js",
-            "iconUrl": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/cnporn.jpg"
-        }
-    ]
+  "name": "All-in-One-Nuvio",
+  "version": "1.0.0",
+  "scrapers": [
+    {
+      "id": "phimchill",
+      "name": "Phim Chill",
+      "description": "Xem phim Chill HD Vietsub",
+      "version": "3.7.7",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie", "tv"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/9d250115cfc1a9625c09824e5e0ba68a44dd1170/Plugins/phimchill_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["m3u8", "mp4"],
+      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/phimchill.ico",
+      "contentLanguage": ["vi"]
+    },
+    {
+      "id": "phimhayok",
+      "name": "Phim Hay Ok",
+      "description": "Xem phim Hay Ok online",
+      "version": "1.1.1",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie", "tv"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/9d250115cfc1a9625c09824e5e0ba68a44dd1170/Plugins/phimhayok_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["m3u8", "mp4"],
+      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/phimhayok.jpg",
+      "contentLanguage": ["vi"]
+    },
+    {
+      "id": "nguoncnew",
+      "name": "Nguồn C No ADS",
+      "description": "Phim Nguồn C không quảng cáo",
+      "version": "1.26",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie", "tv"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/14f90fe4bebcd6ebb05666cae694654e4f11934d/Plugins/nguoncnew.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["m3u8", "mp4"],
+      "logo": "https://raw.githubusercontent.com/youngbi/repo/main/plugins/nguonC.png",
+      "contentLanguage": ["vi"]
+    },
+    {
+      "id": "phimnganhdc",
+      "name": "Phim Ngắn HDC",
+      "description": "Tổng hợp phim ngắn HDC",
+      "version": "1.2",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie", "tv"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/bef591c63d5bde15a66edb861b94045fda8895fb/Plugins/phimnganhdc_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["m3u8", "mp4"],
+      "logo": "https://phimnganhdc.com/storage/files/logo-phimnganhdc.png",
+      "contentLanguage": ["vi"]
+    },
+    {
+      "id": "onflix",
+      "name": "Onflix Phim",
+      "description": "Onflix xem phim online",
+      "version": "1.7.6",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie", "tv"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/98e347ea11b87239072bcc72e97f2de2fc410d6c/Plugins/onflix_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["m3u8", "mp4"],
+      "logo": "https://onflix.lat/app/asset/logo.png",
+      "contentLanguage": ["vi"]
+    },
+    {
+      "id": "bilutv",
+      "name": "Nguồn Bilutv",
+      "description": "Xem phim Bilutv HD",
+      "version": "1.4",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie", "tv"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/aa1986339c3b8f2d3ac86db859a5e7dd86b548da/Plugins/bilutv_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["m3u8", "mp4"],
+      "logo": "https://bilutv.asia/img/bilutvlogo-ngang.jpg",
+      "contentLanguage": ["vi"]
+    },
+    {
+      "id": "sexdep",
+      "name": "Sex Đep",
+      "description": "Nội dung người lớn 18+",
+      "version": "1.4.4",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/2a7a4264042ab6d5c88290ec2b90e14d46b9c90e/Plugins/sexdep_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/cnporn.jpg",
+      "contentLanguage": ["vi"]
+    },
+    {
+      "id": "xxxfiles",
+      "name": "XXXfiles",
+      "description": "Nội dung người lớn 18+",
+      "version": "1.9.3",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/ef5eb21af9dea4d539a05f5aa3753a52fbdbe259/Plugins/xxxfiles_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://www.xxxfiles.com/img/logo.png?v=3",
+      "contentLanguage": ["en"]
+    },
+    {
+      "id": "motherless",
+      "name": "Motherless",
+      "description": "Nội dung người lớn 18+",
+      "version": "1.5",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/ef5eb21af9dea4d539a05f5aa3753a52fbdbe259/Plugins/motherless_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/motherless_logo.jpg",
+      "contentLanguage": ["en"]
+    },
+    {
+      "id": "heovl",
+      "name": "Heovl",
+      "description": "Nội dung người lớn 18+",
+      "version": "1.4",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/e60ddbcdc0fd78e80b33ad1b818c4d50b2dc35ba/Plugins/heovl_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://heovl.im/resize/50/2024/05/09/3aecc32e86cf3a79a98ed9f567354ab1fdd5d5355ddefdbb24855553b519a396.png",
+      "contentLanguage": ["vi"]
+    },
+    {
+      "id": "newporn",
+      "name": "18 Porn",
+      "description": "Nội dung người lớn 18+",
+      "version": "1.3",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/1fe0e3ad1a513f9bcc5ccabbca07dc497cbf895d/Plugins/18porn_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/18porn.jpg",
+      "contentLanguage": ["en"]
+    },
+    {
+      "id": "viet69",
+      "name": "viet69",
+      "description": "Nội dung người lớn 18+",
+      "version": "1.4",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/b84842bddc7bd1a53b344dc06b56ef2e8ba13d09/Plugins/viet69_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/viet69.png",
+      "contentLanguage": ["vi"]
+    },
+    {
+      "id": "haysex",
+      "name": "Haysex",
+      "description": "Nội dung người lớn 18+",
+      "version": "1.0",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/d6295579197874c80e0188ee5f960b60a1959a4e/Plugins/haysex_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://phimsexsuong3x.net/wp-content/uploads/2023/07/haysex3x-logo.png",
+      "contentLanguage": ["vi"]
+    },
+    {
+      "id": "xhamster",
+      "name": "Xamster",
+      "description": "Nội dung người lớn 18+",
+      "version": "1.0",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/d6295579197874c80e0188ee5f960b60a1959a4e/Plugins/xhamster_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://static.cdnsolutions.media/xh-desktop/images/favicon/favicon-v2-256x256.ico",
+      "contentLanguage": ["en"]
+    },
+    {
+      "id": "superporn",
+      "name": "SuperPorn",
+      "description": "Nội dung người lớn 18+",
+      "version": "3.6.1",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/916cd0293662360ba0289c572c59ac3679e2bf88/Plugins/superporn_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://superporn.com/favicon.ico",
+      "contentLanguage": ["en"]
+    },
+    {
+      "id": "sexmup",
+      "name": "Sex Múp",
+      "description": "Nội dung người lớn 18+",
+      "version": "1.2",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/e6587a2d2efc865d52d95648f7bd383c113ac5e1/Plugins/sexmup_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://sexmupxinh.net/favicon.ico",
+      "contentLanguage": ["vi"]
+    },
+    {
+      "id": "justporn",
+      "name": "Just Porn",
+      "description": "Nội dung người lớn 18+",
+      "version": "1.5.2",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/f3bd044b3b36fcd15e67e89a1571c3a5b42af9c7/Plugins/just_porn_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://c847a9a666.mjedge.net/contents/pkehlvuovbaw/theme/logo.png",
+      "contentLanguage": ["en"]
+    },
+    {
+      "id": "trannyone",
+      "name": "Tranny One",
+      "description": "Nội dung người lớn 18+",
+      "version": "2.3.5",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/1e82cba9d7f218e31b75be595ba4ce0fa3f36728/Plugins/trannyone_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://cdn1.tranny.one/trannystatic/v30/common/lib-tr/img/logo-2x.png",
+      "contentLanguage": ["en"]
+    },
+    {
+      "id": "trannymovs",
+      "name": "Tranny Movs",
+      "description": "Nội dung người lớn 18+",
+      "version": "1.6",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/43f27bb8c8d43b37c0f19b0fd5f3a97018f5dbc1/Plugins/trannymovs_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://www.trannymovs.com/static/images/trannymovs-logo.png",
+      "contentLanguage": ["en"]
+    },
+    {
+      "id": "koreaporn",
+      "name": "Sex Hàn",
+      "description": "Nội dung người lớn 18+",
+      "version": "1.7.2",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/b208efaddf974d9a0b87e690805e53c6b5502f00/Plugins/koreaporn_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://koreanpornmovie.com/wp-content/uploads/2025/01/sadasdasdasdas.png",
+      "contentLanguage": ["ko"]
+    },
+    {
+      "id": "chinesporn",
+      "name": "Sex Trung",
+      "description": "Nội dung người lớn 18+",
+      "version": "1.3",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/1fdb307330275e8e51921cddcf70824ed40b50e5/Plugins/chinesporn_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/chinesporn.jpg",
+      "contentLanguage": ["zh"]
+    },
+    {
+      "id": "krx18",
+      "name": "Phim 18+",
+      "description": "Nội dung người lớn 18+",
+      "version": "1.0",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/23b50e4e047757cf21be309468ae06ee1f458d87/Plugins/krx18_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://krx18.com/wp-content/uploads/2022/10/krx18B.png",
+      "contentLanguage": ["vi"]
+    },
+    {
+      "id": "porn00",
+      "name": "Porn00",
+      "description": "Nội dung người lớn 18+",
+      "version": "1.8",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/f552eb2a142f0f9733ad954e1d383419ff043c8d/Plugins/porn00_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://www.porn00.tv/static/images/logo.png",
+      "contentLanguage": ["en"]
+    },
+    {
+      "id": "cnporn",
+      "name": "Porn Gái Trung",
+      "description": "Nội dung người lớn 18+",
+      "version": "1.2",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/c9c5ebfc6eab49ca650a14fd5595081e68028028/Plugins/cnporn_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/cnporn.jpg",
+      "contentLanguage": ["zh"]
+    },
+    {
+      "id": "letsporn",
+      "name": "Lets Porn",
+      "description": "Nội dung người lớn 18+",
+      "version": "1.7.2",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/d52fb49d301779730e85a8898427ef1449b90f15/Plugins/letsporn_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://static.letsporn.com/static/img/logo.png?v=1.2",
+      "contentLanguage": ["en"]
+    },
+    {
+      "id": "xsexsub",
+      "name": "Phim XXX Vietsub",
+      "description": "Nội dung người lớn 18+ Vietsub",
+      "version": "1.3",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/3ae45b1dc42a2f5ab78cd16fca4368c14e121880/Plugins/xsexsub_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/cnporn.jpg",
+      "contentLanguage": ["vi"]
+    },
+    {
+      "id": "4kporn",
+      "name": "Phim XXX 4K",
+      "description": "Nội dung người lớn 18+ chất lượng 4K",
+      "version": "1.5",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/68cb61ea19e016ffce2b10f6f90e8b1ed86b0883/Plugins/4kporn_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/cnporn.jpg",
+      "contentLanguage": ["en"]
+    },
+    {
+      "id": "bemyhole",
+      "name": "XXX Độc Lạ",
+      "description": "Nội dung người lớn 18+",
+      "version": "1.7.1",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie"],
+      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/c9faa2e44e70814fcfe3822625f66e57ec8cfd2f/Plugins/bemyhole_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["mp4"],
+      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/cnporn.jpg",
+      "contentLanguage": ["en"]
+    }
+  ]
 }
