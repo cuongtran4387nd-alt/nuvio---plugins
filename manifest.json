@@ -1,526 +1,80 @@
-from pathlib import Path
-
-worker = r'''/**
- * VAX Multi Movie - Cloudflare Worker
- * Gộp các nguồn phim từ youngbi/repo:
- * OPhim, KKPhim, NguonC, CLB Phim Xưa, Sưu Tầm Phim, PhimHDCSS
- *
- * OTruyen không đưa vào vì đây là nguồn truyện tranh, không phải phim.
- *
- * Lưu ý: các nguồn bên thứ ba có thể thay đổi API/HTML. Worker dùng
- * adapter riêng cho từng nguồn và cơ chế best-effort khi lấy stream.
- */
-
-const VERSION = "1.0.0";
-const CACHE_CATALOG = 300;
-const CACHE_META = 1800;
-const CACHE_STREAM = 900;
-
-const PROVIDERS = {
-  ophim: {
-    id: "ophim", name: "OPhim", type: "movie",
-    base: "https://ophim1.com/v1/api",
-    image: "https://img.ophim.live/uploads/movies/",
-    kind: "api"
-  },
-  kkphim: {
-    id: "kkphim", name: "KKPhim", type: "movie",
-    base: "https://phimapi.com/v1/api",
-    image: "https://phimimg.com/",
-    kind: "api"
-  },
-  nguonc: {
-    id: "nguonc", name: "NguonC", type: "movie",
-    base: "https://phim.nguonc.com/api",
-    image: "",
-    kind: "api"
-  },
-  clbpx: {
-    id: "clbpx", name: "CLB Phim Xưa", type: "movie",
-    base: "https://clbphimxua.com",
-    image: "",
-    kind: "html"
-  },
-  sieutamphim: {
-    id: "sieutamphim", name: "Sưu Tầm Phim", type: "movie",
-    base: "https://www.sieutamphim.pro",
-    image: "",
-    kind: "html"
-  },
-  phimhdcs: {
-    id: "phimhdcs", name: "PhimHDCSS", type: "movie",
-    base: "https://phimhdcss.com",
-    image: "",
-    kind: "html"
-  }
-};
-
-const CATEGORIES = [
-  ["Phim mới","phim-moi"],
-  ["Phim lẻ","phim-le"],
-  ["Phim bộ","phim-bo"],
-  ["Hoạt hình","hoat-hinh"],
-  ["Phim chiếu rạp","phim-chieu-rap"],
-  ["Phim thuyết minh","phim-thuyet-minh"],
-  ["Phim lồng tiếng","phim-long-tieng"]
-];
-
-const H = {
-  "Access-Control-Allow-Origin":"*",
-  "Access-Control-Allow-Headers":"*",
-  "Access-Control-Allow-Methods":"GET, OPTIONS"
-};
-
-function json(data, ttl=0) {
-  const h = {"Content-Type":"application/json; charset=utf-8", ...H};
-  if (ttl) h["Cache-Control"] =
-    `public, max-age=${ttl}, stale-while-revalidate=${ttl*2}`;
-  return new Response(JSON.stringify(data), {headers:h});
-}
-
-function err404() {
-  return new Response("Not Found", {status:404, headers:H});
-}
-
-function abs(base, value) {
-  if (!value) return "";
-  if (/^https?:\/\//i.test(value)) return value;
-  if (value.startsWith("//")) return "https:"+value;
-  return base.replace(/\/+$/,"") + "/" + value.replace(/^\/+/,"");
-}
-
-function clean(s) {
-  return String(s || "")
-    .replace(/<script[\s\S]*?<\/script>/gi,"")
-    .replace(/<style[\s\S]*?<\/style>/gi,"")
-    .replace(/<[^>]+>/g," ")
-    .replace(/&nbsp;/gi," ")
-    .replace(/&amp;/gi,"&")
-    .replace(/&#8211;/g,"-")
-    .replace(/&#8217;/g,"'")
-    .replace(/\s+/g," ")
-    .trim();
-}
-
-async function fetchText(url, ttl=300, referer="") {
-  const r = await fetch(url, {
-    headers: {
-      "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131 Safari/537.36",
-      ...(referer ? {"Referer":referer}: {})
+{
+  "id": "org.nuvio.allinone",
+  "name": "All-in-One-Nuvio",
+  "version": "1.0.0",
+  "description": "Kho Plugin Phim va Noi dung tong hop cho Nuvio",
+  "scrapers": [
+    {
+      "id": "phimchill",
+      "name": "Phim Chill",
+      "description": "Xem phim Chill HD Vietsub",
+      "version": "3.7.7",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie", "tv"],
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@9d250115cfc1a9625c09824e5e0ba68a44dd1170/Plugins/phimchill_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["m3u8", "mp4"]
     },
-    cf:{cacheTtl:ttl, cacheEverything:true}
-  });
-  if (!r.ok) throw new Error(`${r.status} ${url}`);
-  return r.text();
-}
-
-async function fetchJson(url, ttl=300, referer="") {
-  const t = await fetchText(url, ttl, referer);
-  return JSON.parse(t);
-}
-
-function imageFor(p, x) {
-  if (!x) return "";
-  if (/^https?:\/\//i.test(x)) return x;
-  if (p === "ophim") return abs(PROVIDERS.ophim.image,x);
-  if (p === "kkphim") return abs(PROVIDERS.kkphim.image,x);
-  if (p === "nguonc") return x;
-  return abs(PROVIDERS[p].base,x);
-}
-
-function makeId(p, slug) {
-  return `vax:${p}:${encodeURIComponent(slug)}`;
-}
-
-function parseId(id) {
-  const m = String(id).match(/^vax:([^:]+):(.+)$/);
-  if (!m) return null;
-  return {provider:m[1], slug:decodeURIComponent(m[2])};
-}
-
-function movieMeta(p, item) {
-  return {
-    id: makeId(p,item.slug || item.id || item.url),
-    type:"movie",
-    name:item.name || item.title || "Unknown",
-    poster:imageFor(p,item.poster_url || item.posterUrl || item.thumb_url || item.image),
-    background:imageFor(p,item.thumb_url || item.backdropUrl || item.poster_url),
-    releaseInfo:item.year ? String(item.year) : undefined,
-    description:item.origin_name || item.description || "",
-    genres:item.category ? (Array.isArray(item.category) ? item.category.map(x=>x.name||x) : [String(item.category)]) : [],
-    posterShape:"poster"
-  };
-}
-
-/* ---------------- API SOURCES ---------------- */
-
-function apiListUrl(p, slug, page, search) {
-  if (p==="ophim") {
-    if (search) return `https://ophim1.com/v1/api/tim-kiem?keyword=${encodeURIComponent(search)}&page=${page}`;
-    const lists=["phim-le","phim-bo","hoat-hinh","tv-shows","phim-chieu-rap","phim-moi"];
-    return `${PROVIDERS.ophim.base}/${lists.includes(slug)?slug:"the-loai/"+slug}?page=${page}&limit=24`;
-  }
-  if (p==="kkphim") {
-    if (search) return `https://phimapi.com/v1/api/tim-kiem?keyword=${encodeURIComponent(search)}&limit=24`;
-    const lists=["phim-vietsub","subteam","phim-thuyet-minh","phim-long-tieng","phim-bo","phim-le","hoat-hinh","tv-shows","phim-chieu-rap"];
-    if (slug==="phim-moi" || slug==="phim-moi-cap-nhat-v3")
-      return `https://phimapi.com/danh-sach/phim-moi-cap-nhat-v3?page=${page}`;
-    return `https://phimapi.com/v1/api/${lists.includes(slug)?"danh-sach/"+slug:"the-loai/"+slug}?page=${page}&limit=24`;
-  }
-  if (p==="nguonc") {
-    if (search) return `https://phim.nguonc.com/api/films/search?keyword=${encodeURIComponent(search)}`;
-    if (slug==="phim-moi" || slug==="phim-moi-cap-nhat")
-      return `https://phim.nguonc.com/api/films/phim-moi-cap-nhat?page=${page}`;
-    const lists=["phim-le","phim-bo","phim-dang-chieu","tv-shows","subteam"];
-    return `https://phim.nguonc.com/api/films/${lists.includes(slug)?"danh-sach/"+slug:"the-loai/"+slug}?page=${page}&sort=updated`;
-  }
-}
-
-function apiItems(p, data) {
-  let items=[];
-  if (p==="ophim" || p==="kkphim") {
-    const d=data.data;
-    items=Array.isArray(d)?d:(d?.items || data.items || []);
-  } else {
-    const d=data.data;
-    items=Array.isArray(d)?d:(d?.items || data.items || []);
-  }
-  return items;
-}
-
-async function apiCatalog(p, slug, page, search) {
-  const data=await fetchJson(apiListUrl(p,slug,page,search),CACHE_CATALOG,PROVIDERS[p].base);
-  const items=apiItems(p,data);
-  return items.slice(0,24).map(x=>movieMeta(p,x));
-}
-
-function apiDetailUrl(p, slug) {
-  if (p==="ophim") return `https://ophim1.com/v1/api/phim/${slug}`;
-  if (p==="kkphim") return `https://phimapi.com/phim/${slug}`;
-  return `https://phim.nguonc.com/api/film/${slug}`;
-}
-
-function extractApiServers(p,data) {
-  let movie=data.movie || data.data?.item || data.data || {};
-  let eps=data.episodes || movie.episodes || data.data?.item?.episodes || [];
-  const out=[];
-  for (const server of (Array.isArray(eps)?eps:[])) {
-    const rows=server.server_data || server.items || [];
-    const episodes=[];
-    for (const ep of (Array.isArray(rows)?rows:[])) {
-      const url=ep.link_m3u8 || ep.m3u8 || ep.link_embed || ep.embed;
-      if (url) episodes.push({
-        name:ep.name || ep.episode_name || "Full",
-        url
-      });
-    }
-    if (episodes.length) out.push({
-      name:server.server_name || server.name || "Server",
-      episodes
-    });
-  }
-  return {movie,servers:out};
-}
-
-async function apiMeta(p,slug) {
-  const data=await fetchJson(apiDetailUrl(p,slug),CACHE_META,PROVIDERS[p].base);
-  const {movie,servers}=extractApiServers(p,data);
-  const meta=movieMeta(p,movie);
-  meta.description=clean(movie.content || movie.description || "");
-  meta.releaseInfo=movie.year ? String(movie.year) : meta.releaseInfo;
-  meta.imdbRating=movie.imdb?.vote_average || movie.tmdb?.vote_average || undefined;
-  meta.genres=(movie.category||[]).map(x=>x.name||x);
-  meta.country=(movie.country||[]).map(x=>x.name||x).join(", ");
-  meta.director=movie.director||[];
-  meta.cast=movie.actor||[];
-  if (servers.length) {
-    const longest=servers.reduce((a,b)=>b.episodes.length>a.episodes.length?b:a,servers[0]);
-    meta.videos=longest.episodes.map((e,i)=>({
-      id:`${makeId(p,slug)}:${i+1}`,
-      title:e.name || `Tập ${i+1}`,
-      season:1, episode:i+1
-    }));
-  }
-  return {meta,servers};
-}
-
-/* ---------------- HTML SOURCES ---------------- */
-
-function htmlList(p, html) {
-  const out=[], seen=new Set();
-
-  if (p==="clbpx") {
-    const re=/<article[\s\S]*?<a href="([^"]+)"[\s\S]*?<img[^>]+(?:src|data-src)="([^"]+)"[^>]*alt="([^"]+)"/gi;
-    let m;
-    while((m=re.exec(html))) {
-      const u=m[1], slug=(u.match(/clbphimxua\.com\/([^/?#]+)/i)||[])[1]||u;
-      if(seen.has(slug)) continue; seen.add(slug);
-      out.push({slug,title:clean(m[3]),posterUrl:m[2]});
-    }
-  } else if (p==="sieutamphim") {
-    const chunks=html.split('class="col post-item"');
-    for(let i=1;i<chunks.length;i++){
-      const b=chunks[i];
-      const u=(b.match(/href="([^"]+\.html)"/i)||[])[1];
-      if(!u) continue;
-      const slug=(u.match(/\/([^/]+)\.html/i)||[])[1]||u;
-      if(seen.has(slug)) continue; seen.add(slug);
-      const title=clean((b.match(/post-title[^>]*>([\s\S]*?)<\/a>/i)||b.match(/alt="([^"]+)"/i)||[])[1]);
-      const poster=(b.match(/(?:data-src|src)="([^"]+)"/i)||[])[1]||"";
-      out.push({slug,title,posterUrl:poster});
-    }
-  } else if (p==="phimhdcs") {
-    const re=/<li\s+class="item[^"]*"[\s\S]*?<a\s+href="https:\/\/phimhdcss\.com\/([^"]+)"\s+title="([^"]+)"[\s\S]*?<img[^>]+src="([^"]+)"/gi;
-    let m;
-    while((m=re.exec(html))) {
-      const slug=m[1], title=clean(m[2]);
-      if(seen.has(slug)) continue; seen.add(slug);
-      out.push({slug,title,posterUrl:m[3]});
-    }
-  }
-  return out.slice(0,24).map(x=>({
-    id:makeId(p,x.slug), type:"movie", name:x.title,
-    poster:imageFor(p,x.posterUrl), background:imageFor(p,x.posterUrl),
-    posterShape:"poster"
-  }));
-}
-
-function htmlListUrl(p,slug,page,search) {
-  if(p==="clbpx") {
-    if(search) return `https://clbphimxua.com/${page>1?"page/"+page+"/":""}?s=${encodeURIComponent(search)}`;
-    return slug==="home" ? `https://clbphimxua.com/${page>1?"page/"+page+"/":""}`
-      : `https://clbphimxua.com/category/${slug}/${page>1?"page/"+page+"/":""}`;
-  }
-  if(p==="sieutamphim") {
-    const base="https://www.sieutamphim.pro";
-    if(search) return `${base}/page/${page}?s=${encodeURIComponent(search)}`;
-    return `${base}/search/label/${slug}${page>1?"/page/"+page:""}`;
-  }
-  if(p==="phimhdcs") {
-    if(search) return `https://phimhdcss.com/?search=${encodeURIComponent(search)}${page>1?"&page="+page:""}`;
-    const map={"phim-moi":"phim-moi","top-phim-ngay":"top-phim-ngay","phim-chieu-rap":"phim-chieu-rap","phim-ngan":"phim-ngan","hoat-hinh":"hoat-hinh"};
-    return `${PROVIDERS.phimhdcs.base}/${map[slug]||slug}${page>1?"?page="+page:""}`;
-  }
-}
-
-async function htmlCatalog(p,slug,page,search) {
-  const url=htmlListUrl(p,slug,page,search);
-  const html=await fetchText(url,CACHE_CATALOG,PROVIDERS[p].base);
-  return htmlList(p,html);
-}
-
-function htmlDetailUrl(p,slug) {
-  if(p==="clbpx") return `https://clbphimxua.com/${slug}/`;
-  if(p==="sieutamphim") return `https://www.sieutamphim.pro/wp-json/wp/v2/posts?slug=${encodeURIComponent(slug)}`;
-  return `https://phimhdcss.com/${slug}`;
-}
-
-function parseHtmlDetail(p,html,url) {
-  const title =
-    clean((html.match(/<h1[^>]*class="single-title"[^>]*>([\s\S]*?)<\/h1>/i)||[])[1]) ||
-    clean((html.match(/<span[^>]*class="title"[^>]*>([^<]+)<\/span>/i)||[])[1]) ||
-    clean((html.match(/<meta[^>]+property="og:title"[^>]+content="([^"]+)"/i)||[])[1]);
-
-  const poster =
-    (html.match(/<meta[^>]+property="og:image"[^>]+content="([^"]+)"/i)||[])[1] ||
-    (html.match(/<img[^>]+(?:wp-post-image|itemprop="image")[^>]+src="([^"]+)"/i)||[])[1] || "";
-
-  const desc=clean((html.match(/<meta[^>]+property="og:description"[^>]+content="([^"]+)"/i)||[])[1]);
-
-  const urls=[];
-  const add=(u,n="Xem phim")=>{
-    if(!u || urls.some(x=>x.url===u)) return;
-    urls.push({url:u,name:n});
-  };
-
-  // m3u8/mp4 trực tiếp
-  for(const m of html.matchAll(/https?:\/\/[^"'\\\s<>]+?\.(?:m3u8|mp4)(?:\?[^"'\\\s<>]*)?/gi))
-    add(m[0],"Direct");
-
-  // iframe/embed
-  for(const m of html.matchAll(/<(?:iframe|embed)[^>]+src=["']([^"']+)["']/gi))
-    add(m[1],"Embed");
-
-  // CLB Phim Xưa player links
-  if(p==="clbpx")
-    for(const m of html.matchAll(/https?:\/\/clbphimxua\.com\/clbpx(?:\.html)?\?v=[A-Za-z0-9_-]+/gi))
-      add(m[0],"CLB");
-
-  // HDCSS episode links
-  if(p==="phimhdcs")
-    for(const m of html.matchAll(/<a\s+href="([^"]+)"\s+id=['"]no-link['"][^>]*title="([^"]+)"/gi))
-      add(abs("https://phimhdcss.com",m[1]),clean(m[2])||"Tập");
-
-  // Sưu Tầm Phim: server URLs encoded in data attributes
-  for(const m of html.matchAll(/data-(?:url|src|play)=["']([^"']+)["']/gi))
-    add(m[1],"Server");
-
-  return {
-    meta:{
-      id:makeId(p,(url.match(/([^/?#]+)(?:\/?$|\?)/)||[])[1]||url),
-      type:"movie", name:title||"Unknown",
-      poster:imageFor(p,poster), background:imageFor(p,poster),
-      description:desc
+    {
+      "id": "phimhayok",
+      "name": "Phim Hay Ok",
+      "description": "Xem phim Hay Ok chat luong cao",
+      "version": "1.1.1",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie", "tv"],
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@9d250115cfc1a9625c09824e5e0ba68a44dd1170/Plugins/phimhayok_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["m3u8", "mp4"]
     },
-    streams:urls
-  };
-}
-
-async function htmlMeta(p,slug) {
-  const url=htmlDetailUrl(p,slug);
-  const html=await fetchText(url,CACHE_META,PROVIDERS[p].base);
-  return parseHtmlDetail(p,html,url);
-}
-
-/* ---------------- STREAM RESOLUTION ---------------- */
-
-async function resolvePage(url) {
-  if(/\.(m3u8|mp4)(\?|$)/i.test(url)) return url;
-  try {
-    const html=await fetchText(url,CACHE_STREAM,url);
-    const m3=html.match(/https?:\/\/[^"'\\\s<>]+\.m3u8(?:\?[^"'\\\s<>]*)?/i);
-    if(m3) return m3[0];
-    const mp4=html.match(/https?:\/\/[^"'\\\s<>]+\.mp4(?:\?[^"'\\\s<>]*)?/i);
-    if(mp4) return mp4[0];
-  } catch {}
-  return url;
-}
-
-/* ---------------- STREMIO ---------------- */
-
-function providerCatalogs() {
-  const out=[];
-  for(const p of Object.values(PROVIDERS)) {
-    const cats = p.id==="clbpx"
-      ? [["Mới cập nhật","home"],["Kiếm Hiệp","phim-bo-kiem-hiep-co-trang"],["Tiên Hiệp","tien-hiep-ngon-tinh"],["Anime","phim-hoat-hinh"]]
-      : CATEGORIES;
-    for(const [name,slug] of cats) {
-      out.push({
-        type:"movie",
-        id:`vax-${p.id}-${slug}`,
-        name:`${p.name} • ${name}`,
-        extra:[
-          {name:"search",isRequired:false},
-          {name:"skip",isRequired:false}
-        ]
-      });
+    {
+      "id": "nguoncnew",
+      "name": "Nguồn C No ADS",
+      "description": "Nguon phim C cap nhat nhanh khong quang cao",
+      "version": "1.26",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie", "tv"],
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@14f90fe4bebcd6ebb05666cae694654e4f11934d/Plugins/nguoncnew.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["m3u8", "mp4"]
+    },
+    {
+      "id": "phimnganhdc",
+      "name": "Phim Ngắn HDC",
+      "description": "Kho phim ngan vietsub HDC",
+      "version": "1.2",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie", "tv"],
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@bef591c63d5bde15a66edb861b94045fda8895fb/Plugins/phimnganhdc_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["m3u8", "mp4"]
+    },
+    {
+      "id": "onflix",
+      "name": "Onflix Phim",
+      "description": "Onflix phim truyền hình va phim le",
+      "version": "1.7.6",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie", "tv"],
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@98e347ea11b87239072bcc72e97f2de2fc410d6c/Plugins/onflix_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["m3u8", "mp4"]
+    },
+    {
+      "id": "bilutv",
+      "name": "Nguồn Bilutv",
+      "description": "Xem phim tu nguon Bilutv",
+      "version": "1.4",
+      "author": "alokillgtv-gif",
+      "supportedTypes": ["movie", "tv"],
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@aa1986339c3b8f2d3ac86db859a5e7dd86b548da/Plugins/bilutv_plugin.js",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": ["m3u8", "mp4"]
     }
-  }
-  return out;
+  ]
 }
-
-function manifest(origin) {
-  return {
-    id:"com.vax.multimovie",
-    version:VERSION,
-    name:"VAX Multi Movie",
-    description:"Nguồn phim tổng hợp: OPhim, KKPhim, NguonC, CLB Phim Xưa, Sưu Tầm Phim và PhimHDCSS.",
-    logo:"https://raw.githubusercontent.com/youngbi/repo/main/plugins/kkphim.png",
-    resources:["catalog","meta","stream"],
-    types:["movie"],
-    idPrefixes:["vax:"],
-    catalogs:providerCatalogs(),
-    behaviorHints:{configurable:false}
-  };
-}
-
-async function router(req) {
-  const u=new URL(req.url);
-  const path=decodeURIComponent(u.pathname);
-
-  if(req.method==="OPTIONS") return new Response(null,{headers:H});
-
-  if(path==="/" || path==="") {
-    return new Response(
-      `<h1>VAX Multi Movie</h1><p>${u.origin}/manifest.json</p>`,
-      {headers:{"Content-Type":"text/html; charset=utf-8",...H}}
-    );
-  }
-
-  if(path==="/manifest.json") return json(manifest(u.origin),86400);
-
-  let m=path.match(/^\/catalog\/movie\/vax-([a-z0-9]+)-(.+)\.json$/i);
-  if(m) {
-    const p=m[1], slug=m[2];
-    if(!PROVIDERS[p]) return json({metas:[]});
-    const sp=new URLSearchParams(u.search);
-    const search=sp.get("search")||"";
-    const skip=parseInt(sp.get("skip")||"0",10);
-    const page=Math.floor(skip/24)+1;
-    try {
-      const metas=PROVIDERS[p].kind==="api"
-        ? await apiCatalog(p,slug,page,search)
-        : await htmlCatalog(p,slug,page,search);
-      return json({metas},CACHE_CATALOG);
-    } catch(e) {
-      return json({metas:[],error:String(e)});
-    }
-  }
-
-  m=path.match(/^\/meta\/movie\/vax:([^:]+):(.+)\.json$/i);
-  if(m) {
-    const p=m[1], slug=decodeURIComponent(m[2]);
-    if(!PROVIDERS[p]) return json({meta:null});
-    try {
-      const r=PROVIDERS[p].kind==="api"
-        ? await apiMeta(p,slug)
-        : await htmlMeta(p,slug);
-      return json({meta:r.meta},CACHE_META);
-    } catch(e) {
-      return json({meta:null,error:String(e)});
-    }
-  }
-
-  m=path.match(/^\/stream\/movie\/vax:([^:]+):([^:]+)(?::(\d+):(\d+))?\.json$/i);
-  if(m) {
-    const p=m[1], slug=decodeURIComponent(m[2]), ep=m[5]?parseInt(m[5],10):1;
-    if(!PROVIDERS[p]) return json({streams:[]});
-    try {
-      let streams=[];
-      if(PROVIDERS[p].kind==="api") {
-        const r=await apiMeta(p,slug);
-        for(const s of r.servers) {
-          const e=s.episodes[ep-1] || s.episodes[0];
-          if(e) {
-            const url=await resolvePage(e.url);
-            streams.push({
-              name:PROVIDERS[p].name,
-              title:`${s.name} • ${e.name}`,
-              url,
-              behaviorHints:{notWebReady:false,bingeGroup:`${p}-${slug}`}
-            });
-          }
-        }
-      } else {
-        const r=await htmlMeta(p,slug);
-        for(const s of r.streams) {
-          const url=await resolvePage(s.url);
-          streams.push({
-            name:PROVIDERS[p].name,
-            title:s.name,
-            url,
-            behaviorHints:{notWebReady:false,bingeGroup:`${p}-${slug}`}
-          });
-        }
-      }
-      return json({streams},CACHE_STREAM);
-    } catch(e) {
-      return json({streams:[],error:String(e)});
-    }
-  }
-
-  return err404();
-}
-
-export default {
-  async fetch(request) {
-    try { return await router(request); }
-    catch(e) { return json({error:String(e)}); }
-  }
-};
-'''
-
-path = Path("/mnt/data/vax-multi-movie-worker.js")
-path.write_text(worker, encoding="utf-8")
-print(f"Đã tạo: {path}")
-print(f"Kích thước: {path.stat().st_size:,} bytes")
