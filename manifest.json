@@ -9,779 +9,334 @@
       "version": "3.7.7",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie", "tv"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/9d250115cfc1a9625c09824e5e0ba68a44dd1170/Plugins/phimchill_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@9d250115cfc1a9625c09824e5e0ba68a44dd1170/Plugins/phimchill_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["m3u8", "mp4"],
-      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/phimchill.ico",
-      "contentLanguage": ["vi"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "phimhayok",
       "name": "Phim Hay Ok",
-      "description": "Xem phim Hay Ok online",
+      "description": "Xem phim Hay Ok chất lượng cao",
       "version": "1.1.1",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie", "tv"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/9d250115cfc1a9625c09824e5e0ba68a44dd1170/Plugins/phimhayok_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@9d250115cfc1a9625c09824e5e0ba68a44dd1170/Plugins/phimhayok_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["m3u8", "mp4"],
-      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/phimhayok.jpg",
-      "contentLanguage": ["vi"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "nguoncnew",
       "name": "Nguồn C No ADS",
-      "description": "Phim Nguồn C không quảng cáo",
+      "description": "Nguồn phim C cập nhật nhanh không quảng cáo",
       "version": "1.26",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie", "tv"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/14f90fe4bebcd6ebb05666cae694654e4f11934d/Plugins/nguoncnew.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@14f90fe4bebcd6ebb05666cae694654e4f11934d/Plugins/nguoncnew.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["m3u8", "mp4"],
-      "logo": "https://raw.githubusercontent.com/youngbi/repo/main/plugins/nguonC.png",
-      "contentLanguage": ["vi"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "phimnganhdc",
       "name": "Phim Ngắn HDC",
-      "description": "Tổng hợp phim ngắn HDC",
+      "description": "Kho phim ngắn vietsub HDC",
       "version": "1.2",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie", "tv"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/bef591c63d5bde15a66edb861b94045fda8895fb/Plugins/phimnganhdc_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@bef591c63d5bde15a66edb861b94045fda8895fb/Plugins/phimnganhdc_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["m3u8", "mp4"],
-      "logo": "https://phimnganhdc.com/storage/files/logo-phimnganhdc.png",
-      "contentLanguage": ["vi"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "onflix",
       "name": "Onflix Phim",
-      "description": "Onflix xem phim online",
+      "description": "Onflix phim truyền hình và phim lẻ",
       "version": "1.7.6",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie", "tv"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/98e347ea11b87239072bcc72e97f2de2fc410d6c/Plugins/onflix_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@98e347ea11b87239072bcc72e97f2de2fc410d6c/Plugins/onflix_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["m3u8", "mp4"],
-      "logo": "https://onflix.lat/app/asset/logo.png",
-      "contentLanguage": ["vi"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "bilutv",
       "name": "Nguồn Bilutv",
-      "description": "Xem phim Bilutv HD",
+      "description": "Xem phim từ nguồn Bilutv",
       "version": "1.4",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie", "tv"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/aa1986339c3b8f2d3ac86db859a5e7dd86b548da/Plugins/bilutv_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@aa1986339c3b8f2d3ac86db859a5e7dd86b548da/Plugins/bilutv_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["m3u8", "mp4"],
-      "logo": "https://bilutv.asia/img/bilutvlogo-ngang.jpg",
-      "contentLanguage": ["vi"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "sexdep",
-      "name": "Sex Đep",
-      "description": "Nội dung người lớn 18+",
+      "name": "Sex Đẹp",
+      "description": "Nội dung 18+",
       "version": "1.4.4",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/2a7a4264042ab6d5c88290ec2b90e14d46b9c90e/Plugins/sexdep_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@2a7a4264042ab6d5c88290ec2b90e14d46b9c90e/Plugins/sexdep_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/cnporn.jpg",
-      "contentLanguage": ["vi"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "xxxfiles",
       "name": "XXXfiles",
-      "description": "Nội dung người lớn 18+",
+      "description": "Nội dung 18+",
       "version": "1.9.3",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/ef5eb21af9dea4d539a05f5aa3753a52fbdbe259/Plugins/xxxfiles_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@ef5eb21af9dea4d539a05f5aa3753a52fbdbe259/Plugins/xxxfiles_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://www.xxxfiles.com/img/logo.png?v=3",
-      "contentLanguage": ["en"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "motherless",
       "name": "Motherless",
-      "description": "Nội dung người lớn 18+",
+      "description": "Nội dung 18+",
       "version": "1.5",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/ef5eb21af9dea4d539a05f5aa3753a52fbdbe259/Plugins/motherless_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@ef5eb21af9dea4d539a05f5aa3753a52fbdbe259/Plugins/motherless_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/motherless_logo.jpg",
-      "contentLanguage": ["en"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "heovl",
       "name": "Heovl",
-      "description": "Nội dung người lớn 18+",
+      "description": "Nội dung 18+",
       "version": "1.4",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/e60ddbcdc0fd78e80b33ad1b818c4d50b2dc35ba/Plugins/heovl_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@e60ddbcdc0fd78e80b33ad1b818c4d50b2dc35ba/Plugins/heovl_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://heovl.im/resize/50/2024/05/09/3aecc32e86cf3a79a98ed9f567354ab1fdd5d5355ddefdbb24855553b519a396.png",
-      "contentLanguage": ["vi"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "newporn",
       "name": "18 Porn",
-      "description": "Nội dung người lớn 18+",
+      "description": "Nội dung 18+",
       "version": "1.3",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/1fe0e3ad1a513f9bcc5ccabbca07dc497cbf895d/Plugins/18porn_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@1fe0e3ad1a513f9bcc5ccabbca07dc497cbf895d/Plugins/18porn_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/18porn.jpg",
-      "contentLanguage": ["en"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "viet69",
       "name": "viet69",
-      "description": "Nội dung người lớn 18+",
+      "description": "Nội dung 18+",
       "version": "1.4",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/b84842bddc7bd1a53b344dc06b56ef2e8ba13d09/Plugins/viet69_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@b84842bddc7bd1a53b344dc06b56ef2e8ba13d09/Plugins/viet69_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/viet69.png",
-      "contentLanguage": ["vi"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "haysex",
       "name": "Haysex",
-      "description": "Nội dung người lớn 18+",
+      "description": "Nội dung 18+",
       "version": "1.0",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/d6295579197874c80e0188ee5f960b60a1959a4e/Plugins/haysex_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@d6295579197874c80e0188ee5f960b60a1959a4e/Plugins/haysex_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://phimsexsuong3x.net/wp-content/uploads/2023/07/haysex3x-logo.png",
-      "contentLanguage": ["vi"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "xhamster",
-      "name": "Xamster",
-      "description": "Nội dung người lớn 18+",
+      "name": "Xhamster",
+      "description": "Nội dung 18+",
       "version": "1.0",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/d6295579197874c80e0188ee5f960b60a1959a4e/Plugins/xhamster_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@d6295579197874c80e0188ee5f960b60a1959a4e/Plugins/xhamster_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://static.cdnsolutions.media/xh-desktop/images/favicon/favicon-v2-256x256.ico",
-      "contentLanguage": ["en"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "superporn",
       "name": "SuperPorn",
-      "description": "Nội dung người lớn 18+",
+      "description": "Nội dung 18+",
       "version": "3.6.1",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/916cd0293662360ba0289c572c59ac3679e2bf88/Plugins/superporn_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@916cd0293662360ba0289c572c59ac3679e2bf88/Plugins/superporn_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://superporn.com/favicon.ico",
-      "contentLanguage": ["en"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "sexmup",
       "name": "Sex Múp",
-      "description": "Nội dung người lớn 18+",
+      "description": "Nội dung 18+",
       "version": "1.2",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/e6587a2d2efc865d52d95648f7bd383c113ac5e1/Plugins/sexmup_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@e6587a2d2efc865d52d95648f7bd383c113ac5e1/Plugins/sexmup_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://sexmupxinh.net/favicon.ico",
-      "contentLanguage": ["vi"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "justporn",
       "name": "Just Porn",
-      "description": "Nội dung người lớn 18+",
+      "description": "Nội dung 18+",
       "version": "1.5.2",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/f3bd044b3b36fcd15e67e89a1571c3a5b42af9c7/Plugins/just_porn_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@f3bd044b3b36fcd15e67e89a1571c3a5b42af9c7/Plugins/just_porn_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://c847a9a666.mjedge.net/contents/pkehlvuovbaw/theme/logo.png",
-      "contentLanguage": ["en"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "trannyone",
       "name": "Tranny One",
-      "description": "Nội dung người lớn 18+",
+      "description": "Nội dung 18+",
       "version": "2.3.5",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/1e82cba9d7f218e31b75be595ba4ce0fa3f36728/Plugins/trannyone_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@1e82cba9d7f218e31b75be595ba4ce0fa3f36728/Plugins/trannyone_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://cdn1.tranny.one/trannystatic/v30/common/lib-tr/img/logo-2x.png",
-      "contentLanguage": ["en"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "trannymovs",
       "name": "Tranny Movs",
-      "description": "Nội dung người lớn 18+",
+      "description": "Nội dung 18+",
       "version": "1.6",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/43f27bb8c8d43b37c0f19b0fd5f3a97018f5dbc1/Plugins/trannymovs_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@43f27bb8c8d43b37c0f19b0fd5f3a97018f5dbc1/Plugins/trannymovs_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://www.trannymovs.com/static/images/trannymovs-logo.png",
-      "contentLanguage": ["en"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "koreaporn",
       "name": "Sex Hàn",
-      "description": "Nội dung người lớn 18+",
+      "description": "Nội dung 18+",
       "version": "1.7.2",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/b208efaddf974d9a0b87e690805e53c6b5502f00/Plugins/koreaporn_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@b208efaddf974d9a0b87e690805e53c6b5502f00/Plugins/koreaporn_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://koreanpornmovie.com/wp-content/uploads/2025/01/sadasdasdasdas.png",
-      "contentLanguage": ["ko"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "chinesporn",
       "name": "Sex Trung",
-      "description": "Nội dung người lớn 18+",
+      "description": "Nội dung 18+",
       "version": "1.3",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/1fdb307330275e8e51921cddcf70824ed40b50e5/Plugins/chinesporn_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@1fdb307330275e8e51921cddcf70824ed40b50e5/Plugins/chinesporn_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/chinesporn.jpg",
-      "contentLanguage": ["zh"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "krx18",
       "name": "Phim 18+",
-      "description": "Nội dung người lớn 18+",
+      "description": "Nội dung 18+",
       "version": "1.0",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/23b50e4e047757cf21be309468ae06ee1f458d87/Plugins/krx18_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@23b50e4e047757cf21be309468ae06ee1f458d87/Plugins/krx18_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://krx18.com/wp-content/uploads/2022/10/krx18B.png",
-      "contentLanguage": ["vi"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "porn00",
       "name": "Porn00",
-      "description": "Nội dung người lớn 18+",
+      "description": "Nội dung 18+",
       "version": "1.8",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/f552eb2a142f0f9733ad954e1d383419ff043c8d/Plugins/porn00_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@f552eb2a142f0f9733ad954e1d383419ff043c8d/Plugins/porn00_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://www.porn00.tv/static/images/logo.png",
-      "contentLanguage": ["en"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "cnporn",
       "name": "Porn Gái Trung",
-      "description": "Nội dung người lớn 18+",
+      "description": "Nội dung 18+",
       "version": "1.2",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/c9c5ebfc6eab49ca650a14fd5595081e68028028/Plugins/cnporn_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@c9c5ebfc6eab49ca650a14fd5595081e68028028/Plugins/cnporn_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/cnporn.jpg",
-      "contentLanguage": ["zh"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "letsporn",
       "name": "Lets Porn",
-      "description": "Nội dung người lớn 18+",
+      "description": "Nội dung 18+",
       "version": "1.7.2",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/d52fb49d301779730e85a8898427ef1449b90f15/Plugins/letsporn_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@d52fb49d301779730e85a8898427ef1449b90f15/Plugins/letsporn_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://static.letsporn.com/static/img/logo.png?v=1.2",
-      "contentLanguage": ["en"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "xsexsub",
       "name": "Phim XXX Vietsub",
-      "description": "Nội dung người lớn 18+ Vietsub",
+      "description": "Nội dung 18+",
       "version": "1.3",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/3ae45b1dc42a2f5ab78cd16fca4368c14e121880/Plugins/xsexsub_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@3ae45b1dc42a2f5ab78cd16fca4368c14e121880/Plugins/xsexsub_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/cnporn.jpg",
-      "contentLanguage": ["vi"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "4kporn",
       "name": "Phim XXX 4K",
-      "description": "Nội dung người lớn 18+ chất lượng 4K",
+      "description": "Nội dung 18+",
       "version": "1.5",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/68cb61ea19e016ffce2b10f6f90e8b1ed86b0883/Plugins/4kporn_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@68cb61ea19e016ffce2b10f6f90e8b1ed86b0883/Plugins/4kporn_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/cnporn.jpg",
-      "contentLanguage": ["en"]
+      "formats": ["m3u8", "mp4"]
     },
     {
       "id": "bemyhole",
       "name": "XXX Độc Lạ",
-      "description": "Nội dung người lớn 18+",
+      "description": "Nội dung 18+",
       "version": "1.7.1",
       "author": "alokillgtv-gif",
       "supportedTypes": ["movie"],
-      "filename": "https://rawcdn.githack.com/alokillgtv-gif/VAXAPPSCRIPT/c9faa2e44e70814fcfe3822625f66e57ec8cfd2f/Plugins/bemyhole_plugin.js",
+      "filename": "https://cdn.jsdelivr.net/gh/alokillgtv-gif/VAXAPPSCRIPT@c9faa2e44e70814fcfe3822625f66e57ec8cfd2f/Plugins/bemyhole_plugin.js",
       "enabled": true,
       "hasSettings": false,
-      "formats": ["mp4"],
-      "logo": "https://raw.githubusercontent.com/alokillgtv-gif/VAXAPPSCRIPT/main/img/cnporn.jpg",
-      "contentLanguage": ["en"]
+      "formats": ["m3u8", "mp4"]
     }
   ]
-}
-/**
- * Stremio Addon cho KKPHIM (phimapi.com) - Cloudflare Workers
- * Ultra-Optimized Edition - Support Genre, Country, Year & Fix Meta/Stream Async
- */
-
-const API_BASE = "https://phimapi.com";
-const IMG_CDN = "https://phimimg.com";
-const ADDON_ID = "org.hoang.kkphim";
-const ADDON_VERSION = "1.3.0";
-const ADDON_NAME = "KKPHIM";
-
-// Cache TTL (Tính bằng giây)
-const CACHE_CATALOG_SEC = 600;  // Cache danh sách phim 10 phút
-const CACHE_META_SEC = 7200;    // Cache thông tin chi tiết phim 2 giờ
-const CACHE_STREAM_SEC = 3600;  // Cache link xem phim 1 giờ
-
-const CATALOGS = [
-  // Tab Movies (Phim lẻ)
-  { id: "phim-moi-cap-nhat", name: "Mới Cập Nhật", stremioType: "movie" },
-  { id: "phim-le", name: "Phim Lẻ", stremioType: "movie" },
-  { id: "hoat-hinh", name: "Hoạt Hình", stremioType: "movie" },
-  
-  // Tab Series (Phim bộ)
-  { id: "phim-bo", name: "Phim Bộ", stremioType: "series" },
-  { id: "tv-shows", name: "TV Shows", stremioType: "series" },
-];
-
-const GENRES = [
-  { name: "Hành Động", slug: "hanh-dong" },
-  { name: "Tình Cảm", slug: "tinh-cam" },
-  { name: "Hài Hước", slug: "hai-huoc" },
-  { name: "Cổ Trang", slug: "co-trang" },
-  { name: "Tâm Lý", slug: "tam-ly" },
-  { name: "Hình Sự", slug: "hinh-su" },
-  { name: "Kinh Dị", slug: "kinh-di" },
-  { name: "Viễn Tưởng", slug: "vien-tuong" },
-  { name: "Phiêu Lưu", slug: "phieu-luu" },
-  { name: "Bí Ẩn", slug: "bi-an" },
-  { name: "Võ Thuật", slug: "vo-thuat" },
-  { name: "Khoa Học", slug: "khoa-hoc" },
-  { name: "Học Đường", slug: "hoc-duong" },
-  { name: "Gia Đình", slug: "gia-dinh" },
-  { name: "Chính Kịch", slug: "chinh-kich" },
-  { name: "Trẻ Em", slug: "tre-em" },
-  { name: "Thể Thao", slug: "the-thao" },
-  { name: "Tài Liệu", slug: "tai-lieu" },
-  { name: "Hoạt Hình", slug: "hoat-hinh" },
-  { name: "Âm Nhạc", slug: "am-nhac" },
-  { name: "Chiến Tranh", slug: "chien-tranh" },
-  { name: "Thần Thoại", slug: "than-thoai" },
-  { name: "Lịch Sử", slug: "lich-su" },
-  { name: "Phim 18+", slug: "phim-18" },
-];
-
-const COUNTRIES = [
-  { name: "Trung Quốc", slug: "trung-quoc" },
-  { name: "Hàn Quốc", slug: "han-quoc" },
-  { name: "Nhật Bản", slug: "nhat-ban" },
-  { name: "Thái Lan", slug: "thai-lan" },
-  { name: "Âu Mỹ", slug: "au-my" },
-  { name: "Đài Loan", slug: "dai-loan" },
-  { name: "Hồng Kông", slug: "hong-kong" },
-  { name: "Ấn Độ", slug: "an-do" },
-  { name: "Việt Nam", slug: "viet-nam" },
-];
-
-// Tạo danh sách năm từ năm hiện tại lùi lại 20 năm
-const currentYear = new Date().getFullYear();
-const YEARS = Array.from({ length: 20 }, (_, i) => String(currentYear - i));
-
-const GENRE_SLUG_BY_NAME = Object.fromEntries(GENRES.map((g) => [g.name, g.slug]));
-const COUNTRY_SLUG_BY_NAME = Object.fromEntries(COUNTRIES.map((c) => [c.name, c.slug]));
-
-const CORS_HEADERS = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "*",
-  "Access-Control-Allow-Methods": "GET, OPTIONS",
-};
-
-export default {
-  async fetch(request, env, ctx) {
-    return await router(request);
-  }
-};
-
-function json(data, cacheTtlSec = 0) {
-  const headers = {
-    "Content-Type": "application/json; charset=utf-8",
-    ...CORS_HEADERS,
-  };
-  
-  if (cacheTtlSec > 0) {
-    headers["Cache-Control"] = `public, max-age=${cacheTtlSec}, stale-while-revalidate=${cacheTtlSec * 2}`;
-  }
-
-  return new Response(JSON.stringify(data), { headers });
-}
-
-function notFound() {
-  return new Response("Not Found", { status: 404, headers: CORS_HEADERS });
-}
-
-function absImg(path) {
-  if (!path) return "";
-  if (path.startsWith("http://") || path.startsWith("https://")) return path;
-  return `${IMG_CDN}/${path.replace(/^\/+/, "")}`;
-}
-
-function extractM3u8FromEmbed(embedUrl) {
-  if (!embedUrl) return null;
-  try {
-    const u = new URL(embedUrl);
-    const inner = u.searchParams.get("url");
-    return inner ? decodeURIComponent(inner) : null;
-  } catch {
-    return null;
-  }
-}
-
-// Fetch dữ liệu tối ưu Cache trên Cloudflare CDN
-async function fetchJSON(url, cacheTtl = 300) {
-  const res = await fetch(url, {
-    headers: {
-      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-      "Referer": `${API_BASE}/`,
-    },
-    cf: {
-      cacheTtl: cacheTtl,
-      cacheEverything: true,
-    },
-  });
-  if (!res.ok) throw new Error(`Fetch failed ${res.status}: ${url}`);
-  return res.json();
-}
-
-function buildManifest() {
-  const genreOptions = [
-    ...GENRES.map((g) => g.name),
-    ...COUNTRIES.map((c) => `Quốc gia: ${c.name}`),
-    ...YEARS.map((y) => `Năm: ${y}`)
-  ];
-
-  return {
-    id: ADDON_ID,
-    version: ADDON_VERSION,
-    name: ADDON_NAME,
-    description: "Xem phim Vietsub/Thuyết Minh từ KKPHIM (phimapi.com)",
-    logo: "https://phimapi.com/favicon.ico",
-    resources: ["catalog", "meta", "stream"],
-    types: ["movie", "series"],
-    idPrefixes: ["kkphim:"],
-    catalogs: CATALOGS.map((c) => ({
-      type: c.stremioType,
-      id: `kkphim-${c.id}-${c.stremioType}`,
-      name: c.name,
-      extra: [
-        { name: "search", isRequired: false },
-        { name: "genre", isRequired: false, options: genreOptions },
-        { name: "skip", isRequired: false },
-      ],
-    })),
-    behaviorHints: { configurable: false },
-  };
-}
-
-function itemToPreview(item, stremioType) {
-  return {
-    id: `kkphim:${item.slug}`,
-    type: stremioType,
-    name: item.name,
-    poster: absImg(item.poster_url || item.thumb_url),
-    posterShape: "poster",
-    background: absImg(item.thumb_url || item.poster_url),
-    releaseInfo: item.year ? String(item.year) : undefined,
-    description: item.origin_name || item.name,
-    genres: (item.category || []).map((c) => c.name),
-  };
-}
-
-function itemStremioType(item) {
-  return (item.type === "series" || item.type === "hoathinh" && item.episode_total !== "1") ? "series" : "movie";
-}
-
-function buildApiUrl(catalogSlug, page, search, genreSlug, countrySlug, year) {
-  if (search) {
-    return `${API_BASE}/v1/api/tim-kiem?keyword=${encodeURIComponent(search)}&page=${page}`;
-  }
-  
-  let url = `${API_BASE}/v1/api/danh-sach/`;
-  if (catalogSlug === "phim-moi-cap-nhat") {
-    url = `${API_BASE}/v1/api/danh-sach?page=${page}`;
-  } else {
-    url += `${catalogSlug}?page=${page}&sort_field=modified.time&sort_type=desc`;
-  }
-
-  if (genreSlug) url += `&category=${genreSlug}`;
-  if (countrySlug) url += `&country=${countrySlug}`;
-  if (year) url += `&year=${year}`;
-
-  return url;
-}
-
-async function handleCatalog(catalogSlug, stremioType, searchParams) {
-  const search = searchParams.get("search");
-  const rawGenre = searchParams.get("genre");
-  const skip = parseInt(searchParams.get("skip") || "0", 10);
-  
-  let genreSlug = null;
-  let countrySlug = null;
-  let yearParam = null;
-
-  // Phân tích tham số Genre lọc nâng cao
-  if (rawGenre) {
-    if (rawGenre.startsWith("Quốc gia: ")) {
-      const cName = rawGenre.replace("Quốc gia: ", "");
-      countrySlug = COUNTRY_SLUG_BY_NAME[cName];
-    } else if (rawGenre.startsWith("Năm: ")) {
-      yearParam = rawGenre.replace("Năm: ", "");
-    } else {
-      genreSlug = GENRE_SLUG_BY_NAME[rawGenre];
-    }
-  }
-
-  const startPage = Math.floor(skip / 24) + 1;
-
-  // Tải dữ liệu song song 2 trang để tăng hiệu năng và độ mượt khi cuộn danh sách
-  const urls = [
-    buildApiUrl(catalogSlug, startPage, search, genreSlug, countrySlug, yearParam),
-    buildApiUrl(catalogSlug, startPage + 1, search, genreSlug, countrySlug, yearParam)
-  ];
-
-  const results = await Promise.allSettled(urls.map((u) => fetchJSON(u, CACHE_CATALOG_SEC)));
-  let rawItems = [];
-
-  for (const res of results) {
-    if (res.status === "fulfilled") {
-      const items = res.value?.data?.items || res.value?.items || [];
-      rawItems.push(...items);
-    }
-  }
-
-  // Lọc đúng định dạng Type (Movie/Series)
-  const filtered = rawItems.filter((it) => {
-    const t = itemStremioType(it);
-    return stremioType === "movie" ? t === "movie" : t === "series";
-  });
-
-  const metas = filtered.slice(0, 20).map((it) => itemToPreview(it, stremioType));
-  return json({ metas }, CACHE_CATALOG_SEC);
-}
-
-async function handleMeta(slug) {
-  const data = await fetchJSON(`${API_BASE}/phim/${slug}`, CACHE_META_SEC);
-  if (!data?.status || !data.movie) return notFound();
-
-  const movie = data.movie;
-  const episodesRaw = data.episodes || [];
-  const isSeries = movie.type === "series" || movie.type === "hoathinh" || episodesRaw.some((s) => (s.server_data || []).length > 1);
-
-  const meta = {
-    id: `kkphim:${slug}`,
-    type: isSeries ? "series" : "movie",
-    name: movie.name,
-    poster: absImg(movie.poster_url || movie.thumb_url),
-    background: absImg(movie.thumb_url || movie.poster_url),
-    description: (movie.content || "").replace(/<[^>]+>/g, "").trim(),
-    releaseInfo: movie.year ? String(movie.year) : undefined,
-    imdbRating: movie.imdb?.vote_average ? String(movie.imdb.vote_average) : undefined,
-    genres: (movie.category || []).map((c) => c.name),
-    country: (movie.country || []).map((c) => c.name).join(", "),
-    runtime: movie.time,
-    cast: movie.actor || [],
-    director: (movie.director || []).filter((d) => d && d !== "Đang cập nhật"),
-  };
-
-  if (isSeries) {
-    let maxEpServer = episodesRaw[0];
-    for (const server of episodesRaw) {
-      if ((server.server_data?.length || 0) > (maxEpServer?.server_data?.length || 0)) {
-        maxEpServer = server;
-      }
-    }
-
-    const epList = maxEpServer?.server_data || [];
-    meta.videos = epList.map((ep, idx) => ({
-      id: `kkphim:${slug}:1:${idx + 1}`,
-      title: ep.name ? (ep.name.toLowerCase().includes("tập") ? ep.name : `Tập ${ep.name}`) : `Tập ${idx + 1}`,
-      season: 1,
-      episode: idx + 1,
-      released: movie.created?.time || undefined,
-    }));
-  }
-
-  return json({ meta }, CACHE_META_SEC);
-}
-
-function resolveStreamUrl(serverDataEntry) {
-  if (serverDataEntry.link_m3u8) return serverDataEntry.link_m3u8;
-  return extractM3u8FromEmbed(serverDataEntry.link_embed);
-}
-
-async function handleStream(slug, episode) {
-  const data = await fetchJSON(`${API_BASE}/phim/${slug}`, CACHE_STREAM_SEC);
-  if (!data?.status || !data.episodes) return json({ streams: [] });
-
-  const epIndex = episode ? episode - 1 : 0;
-  const streams = [];
-
-  for (const server of data.episodes) {
-    const entry = server.server_data?.[epIndex];
-    if (!entry) continue;
-    
-    const m3u8 = resolveStreamUrl(entry);
-    if (!m3u8) continue;
-
-    streams.push({
-      name: `KKPHIM`,
-      title: `[${server.server_name}] ${entry.filename || entry.name || ''}`.trim(),
-      url: m3u8,
-      behaviorHints: {
-        notWebReady: false,
-        bingeGroup: `kkphim-${slug}`,
-      },
-    });
-  }
-
-  return json({ streams }, CACHE_STREAM_SEC);
-}
-
-async function router(request) {
-  const url = new URL(request.url);
-  const path = decodeURIComponent(url.pathname);
-
-  if (request.method === "OPTIONS") {
-    return new Response(null, { headers: CORS_HEADERS });
-  }
-
-  if (path === "/" || path === "") {
-    return new Response(
-      `<h1>${ADDON_NAME} Stremio Addon</h1><p>Link cài đặt vào Stremio: <a href="stremio://${url.host}/manifest.json">${url.origin}/manifest.json</a></p>`,
-      { headers: { "Content-Type": "text/html; charset=utf-8" } }
-    );
-  }
-
-  if (path === "/manifest.json") {
-    return json(buildManifest(), 86400);
-  }
-
-  let m = path.match(/^\/catalog\/(movie|series)\/kkphim-([a-z-]+)-(movie|series)(?:\/(.+))?\.json$/);
-  if (m) {
-    const [, , catalogSlug, , extraStr] = m;
-    const params = new URLSearchParams(url.search);
-    
-    if (extraStr) {
-      const extraParams = new URLSearchParams(extraStr);
-      for (const [key, value] of extraParams.entries()) {
-        params.set(key, value);
-      }
-    }
-    
-    const stremioType = m[1];
-    try {
-      return await handleCatalog(catalogSlug, stremioType, params);
-    } catch (e) {
-      return json({ metas: [], error: String(e) });
-    }
-  }
-
-  m = path.match(/^\/meta\/(movie|series)\/kkphim:([^/.]+)\.json$/);
-  if (m) {
-    try {
-      return await handleMeta(m[2]);
-    } catch (e) {
-      return json({ meta: null, error: String(e) });
-    }
-  }
-
-  m = path.match(/^\/stream\/(movie|series)\/kkphim:([^/:]+)(?::(\d+):(\d+))?\.json$/);
-  if (m) {
-    const [, , slug, , episode] = m;
-    try {
-      return await handleStream(slug, episode ? parseInt(episode, 10) : undefined);
-    } catch (e) {
-      return json({ streams: [], error: String(e) });
-    }
-  }
-
-  return notFound();
 }
