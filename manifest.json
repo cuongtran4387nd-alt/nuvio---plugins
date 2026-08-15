@@ -1,6 +1,8 @@
 {
+  "id": "org.nuvio.allinone",
   "name": "All-in-One-Nuvio",
   "version": "1.0.0",
+  "description": "Kho Plugin Phim va Nội dung tổng hợp cho Nuvio",
   "scrapers": [
     {
       "id": "phimchill",
